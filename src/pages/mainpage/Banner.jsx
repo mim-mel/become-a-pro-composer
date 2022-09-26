@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import './../../fonts/fonts.css';
+import styled from "styled-components";
+import "./../../fonts/fonts.css";
 
 const Banner = () => {
   return (
     <BackGround>
-      <BannerImg src='/image/banner-man.jpg' />
+      <BannerImg src="/image/banner-man.jpg" />
       <BannerContnents>
         <BannerTitle>
           BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
@@ -20,8 +20,8 @@ const Banner = () => {
 };
 
 const BackGround = styled.div`
-  background-image: url('/image/banner-background.png');
-  height: 910px;
+  background-image: url("/image/banner-background.png");
+  height: 100vh;
   width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
@@ -30,57 +30,61 @@ const BackGround = styled.div`
   overflow-x: hidden;
 
   @media (max-width: 1024px) {
-    height: 700px;
+    height: 55vh;
   }
 
   @media (max-width: 768px) {
-    height: 850px;
+    height: 100vh;
   }
 `;
 
 const BannerImg = styled.img`
-  width: 1300px;
+  width: 73vw;
   height: auto;
   position: absolute;
   left: 50%;
-  top: 25%;
-  transform: translate(-50%, -25%);
+  top: 15%;
+  transform: translate(-50%, -15%);
 
   @media (max-width: 1024px) {
-    width: 900px;
+    width: 100vw;
   }
 
   @media (max-width: 768px) {
-    width: 680px;
-    left: 100%;
-    top: 0%;
-    transform: translate(-100%, -0%);
+    width: 160vw;
+    left: 105%;
+    top: 5%;
+    transform: translate(-105%, -5%);
   }
 `;
 
 const BannerContnents = styled.div`
   position: absolute;
-  width: 600px;
+  width: 63vw;
   height: 60%;
-  top: 20%;
-  left: 10%;
-  padding: 0 7vw;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, 13%);
 
   @media (max-width: 1024px) {
     padding: 0;
+    width: 78vw;
+    top: 10%;
+    transform: translate(-50%, 10%);
   }
 
   @media (max-width: 768px) {
-    top: 43%;
-    left: 0;
+    top: 28%;
     width: 100vw;
+    left: 0%;
+    transform: translate(-0%, 28%);
   }
 `;
 
 const BannerTitle = styled.h1`
   font-size: 5vw;
   color: white;
-  font-family: 'Bloomer-Regular';
+  font-family: "Bloomer-Regular";
   letter-spacing: 0.1vw;
   font-weight: 400;
   margin: 1vh 0 4vh 0;
@@ -101,7 +105,7 @@ const TitleSpan = styled.span`
 
 const BannerText = styled.div`
   color: white;
-  font-family: 'Exo2';
+  font-family: "Exo2";
   font-size: 1.5vw;
 
   @media (max-width: 1024px) {
@@ -116,7 +120,7 @@ const BannerText = styled.div`
 
 const BannerButton = styled.button`
   font-size: 16px;
-  font-family: 'Roboto-Bold';
+  font-family: "Roboto-Bold";
   letter-spacing: 0.5px;
   margin: 4.5vh 0 0 1vh;
   text-decoration: none;
@@ -125,7 +129,7 @@ const BannerButton = styled.button`
   color: #000;
   border: none;
   cursor: pointer;
-  padding: 25px 50px;
+  padding: 1.2vw 3vw;
   box-shadow: rgba(254, 93, 38) -6px 6px 0 0, -6px 6px 0px 0px;
   position: relative;
   user-select: none;
@@ -138,15 +142,20 @@ const BannerButton = styled.button`
     left: -5px;
   }
 
+  @media (max-width: 1024px) {
+    padding: 2vw 5vw;
+  }
+
   @media (max-width: 768px) {
     display: block;
     margin: 4vh auto 0 auto;
+    padding: 5vw 10vw;
   }
 `;
 
 const BottonBottomText = styled.div`
   color: white;
-  font-family: 'Roboto-Thin';
+  font-family: "Roboto-Thin";
   font-size: 12.5px;
   margin: 18px 0 0 1vh;
 
