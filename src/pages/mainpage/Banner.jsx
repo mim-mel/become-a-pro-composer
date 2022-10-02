@@ -1,10 +1,10 @@
-import styled from "styled-components";
-import "./../../fonts/fonts.css";
+import styled from 'styled-components';
+import './../../fonts/fonts.css';
 
 const Banner = () => {
   return (
     <BackGround>
-      <BannerImg src="/image/banner-man.jpg" />
+      <BannerImg src='/image/banner-man.jpg' />
       <BannerContnents>
         <BannerTitle>
           BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
@@ -20,8 +20,8 @@ const Banner = () => {
 };
 
 const BackGround = styled.div`
-  background-image: url("/image/banner-background.png");
-  height: 100vh;
+  background-image: url('/image/banner-background.png');
+  height: 105vh;
   width: 100vw;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@ const BackGround = styled.div`
 `;
 
 const BannerImg = styled.img`
-  width: 73vw;
+  width: 1300px;
   height: auto;
   position: absolute;
   left: 50%;
@@ -60,7 +60,7 @@ const BannerImg = styled.img`
 
 const BannerContnents = styled.div`
   position: absolute;
-  width: 63vw;
+  width: 1100px;
   height: 60%;
   top: 13%;
   left: 50%;
@@ -82,9 +82,9 @@ const BannerContnents = styled.div`
 `;
 
 const BannerTitle = styled.h1`
-  font-size: 5vw;
+  font-size: 80px;
   color: white;
-  font-family: "Bloomer-Regular";
+  font-family: 'Bloomer-Regular';
   letter-spacing: 0.1vw;
   font-weight: 400;
   margin: 1vh 0 4vh 0;
@@ -105,8 +105,9 @@ const TitleSpan = styled.span`
 
 const BannerText = styled.div`
   color: white;
-  font-family: "Exo2";
-  font-size: 1.5vw;
+  font-family: 'Exo2-Light';
+  font-size: 22px;
+  letter-spacing: 0.1px;
 
   @media (max-width: 1024px) {
     font-size: 1.8vw;
@@ -120,16 +121,16 @@ const BannerText = styled.div`
 
 const BannerButton = styled.button`
   font-size: 16px;
-  font-family: "Roboto-Bold";
+  font-family: 'Roboto-Bold';
   letter-spacing: 0.5px;
-  margin: 4.5vh 0 0 1vh;
+  margin: 55px 0 0 10px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
   color: #000;
   border: none;
   cursor: pointer;
-  padding: 1.2vw 3vw;
+  padding: 25px 55px;
   box-shadow: rgba(254, 93, 38) -6px 6px 0 0, -6px 6px 0px 0px;
   position: relative;
   user-select: none;
@@ -143,6 +144,7 @@ const BannerButton = styled.button`
   }
 
   @media (max-width: 1024px) {
+    margin: 45px 0 0 10px;
     padding: 2vw 5vw;
   }
 
@@ -155,9 +157,13 @@ const BannerButton = styled.button`
 
 const BottonBottomText = styled.div`
   color: white;
-  font-family: "Roboto-Thin";
+  font-family: 'Roboto-Thin';
   font-size: 12.5px;
-  margin: 18px 0 0 1vh;
+  margin: 25px 0 0 10px;
+
+  @media (max-width: 1024px) {
+    margin: 20px 0 0 10px;
+  }
 
   @media (max-width: 768px) {
     margin: 18px 0 0 0;
