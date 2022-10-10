@@ -4,7 +4,7 @@ import './../../fonts/fonts.css';
 const Banner = () => {
   return (
     <BackGround>
-      <BannerImg src='/image/banner-man.jpg' />
+      <BannerImg src='image/banner-man.jpg' alt='banner-man' />
       <BannerContnents>
         <BannerTitle>
           BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
@@ -20,7 +20,7 @@ const Banner = () => {
 };
 
 const BackGround = styled.div`
-  background-image: url('/image/banner-background.png');
+  background-image: url('image/banner-background.png');
   height: 105vh;
   width: 100vw;
   background-size: cover;

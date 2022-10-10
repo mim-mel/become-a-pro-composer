@@ -13,7 +13,7 @@ const Profile = () => {
           If we can do it, <SmallSpanText>so can you</SmallSpanText>. Seriously.
         </SmallText>
         <FotoTextWrap>
-          <ProfilFoto src='/image/profile.jpg' />
+          <ProfilFoto src='image/profile.jpg' />
           <BubbleTextBox>
             <BubbleText>
               Hey! My name is Kevin 👋 and I'm the creator of Become A Pro
