@@ -21,13 +21,16 @@ const Banner = () => {
 
 const BackGround = styled.div`
   background-image: url('image/banner-background.png');
-  height: 105vh;
-  width: 100vw;
+  height: 800px;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
+
+  @media (max-width: 1400px) {
+  }
 
   @media (max-width: 1024px) {
     height: 55vh;
@@ -39,12 +42,19 @@ const BackGround = styled.div`
 `;
 
 const BannerImg = styled.img`
-  width: 1300px;
+  width: 1150px;
   height: auto;
   position: absolute;
   left: 50%;
-  top: 15%;
-  transform: translate(-50%, -15%);
+  top: 20%;
+  transform: translate(-50%, -20%);
+
+  @media (max-width: 1400px) {
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -30%);
+  }
 
   @media (max-width: 1024px) {
     width: 100vw;
@@ -60,11 +70,17 @@ const BannerImg = styled.img`
 
 const BannerContnents = styled.div`
   position: absolute;
-  width: 1100px;
+  width: 900px;
   height: 60%;
-  top: 13%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, 13%);
+  transform: translate(-50%, -55%);
+
+  @media (max-width: 1400px) {
+    width: 80%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+  }
 
   @media (max-width: 1024px) {
     padding: 0;
@@ -82,7 +98,7 @@ const BannerContnents = styled.div`
 `;
 
 const BannerTitle = styled.h1`
-  font-size: 80px;
+  font-size: 70px;
   color: white;
   font-family: 'Bloomer-Regular';
   letter-spacing: 0.1vw;
@@ -106,7 +122,7 @@ const TitleSpan = styled.span`
 const BannerText = styled.div`
   color: white;
   font-family: 'Exo2-Light';
-  font-size: 22px;
+  font-size: 19px;
   letter-spacing: 0.1px;
 
   @media (max-width: 1024px) {
@@ -123,7 +139,7 @@ const BannerButton = styled.button`
   font-size: 16px;
   font-family: 'Roboto-Bold';
   letter-spacing: 0.5px;
-  margin: 55px 0 0 10px;
+  margin: 50px 0 0 8px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
