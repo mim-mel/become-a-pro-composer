@@ -6,7 +6,7 @@ import BlogPage from './pages/blogpage/BlogPage';
 
 function App() {
   return (
-    <BrowserRouter basename='become-a-pro-composer'>
+    <BrowserRouter basename='/become-a-pro-composer/'>
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/blog' element={<BlogPage />} />

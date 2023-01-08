@@ -1,4 +1,5 @@
 import Banner from './Banner';
+import HowToLeran from './HowToLearn';
 import Profile from './Profile';
 
 const MainPage = () => {
@@ -6,6 +7,7 @@ const MainPage = () => {
     <>
       <Banner />
       <Profile />
+      <HowToLeran />
     </>
   );
 };

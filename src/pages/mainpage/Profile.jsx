@@ -4,79 +4,83 @@ import './../../fonts/fonts.css';
 const Profile = () => {
   return (
     <>
-      <Wrap1>
-        <ProfileText>
-          Creating Orchestral Music has <br />
-          <OrangeSpanText>never been easier</OrangeSpanText>
-        </ProfileText>
-        <SmallText>
-          If we can do it, <SmallSpanText>so can you</SmallSpanText>. Seriously.
-        </SmallText>
-        <FotoTextWrap>
-          <ProfilFoto src='image/profile.jpg' alt='profile' />
-          <BubbleTextBox>
-            <BubbleText>
-              Hey! My name is Kevin 👋 and I'm the creator of Become A Pro
-              Composer.
-            </BubbleText>
-            <BubbleText>
-              Orchestral music production can feel overwhelming - I know, I've
-              been there. There's so mush to learn, so many skills to master.
-            </BubbleText>
-            <BubbleText>
-              That's why I made Become A Pro Composer. A learning hub where you
-              grow as a composer and write better music.
-            </BubbleText>
-          </BubbleTextBox>
-        </FotoTextWrap>
-      </Wrap1>
+      <BackgroundWrap>
+        <Background />
+        <Wrap1>
+          <ProfileText>
+            Creating Orchestral Music has <br />
+            <OrangeSpanText>never been easier</OrangeSpanText>
+          </ProfileText>
+          <SmallText>
+            If we can do it, <SmallSpanText>so can you</SmallSpanText>.
+            Seriously.
+          </SmallText>
+          <FotoTextWrap>
+            <ProfilFoto src='image/profile.jpg' alt='profile' />
+            <BubbleTextBox>
+              <BubbleText>
+                Hey! My name is Kevin 👋 and I'm the creator of Become A Pro
+                Composer.
+              </BubbleText>
+              <BubbleText>
+                Orchestral music production can feel overwhelming - I know, I've
+                been there. There's so mush to learn, so many skills to master.
+              </BubbleText>
+              <BubbleText>
+                That's why I made Become A Pro Composer. A learning hub where
+                you grow as a composer and write better music.
+              </BubbleText>
+            </BubbleTextBox>
+          </FotoTextWrap>
+        </Wrap1>
 
-      <Wrap2>
-        <Wrap2Title>
-          Time to turn Your Music Dreams into{' '}
-          <OrangeSpanText>Reality</OrangeSpanText>
-        </Wrap2Title>
-        <Wrap2Text>
-          Become A Pro Composers has been built for composers ( and those who
-          want to become one! )<br />
-          around the world who seek to write music for :
-        </Wrap2Text>
-        <WhiteBoxBlock>
-          <WhiteBox>
-            <WhiteBoxCircle>
-              <CircleIcon1 src='image/soundtrack.png' />
-            </WhiteBoxCircle>
-            <WhiteBoxTitle>Film & TV</WhiteBoxTitle>
-            <WhiteBoxText>
-              Create atmosphare and
-              <br />
-              tell a story with sound.
-            </WhiteBoxText>
-          </WhiteBox>
-          <WhiteBox>
-            <WhiteBoxCircle>
-              <CircleIcon src='image/console.png' />
-            </WhiteBoxCircle>
-            <WhiteBoxTitle>Video Game</WhiteBoxTitle>
-            <WhiteBoxText>
-              Build and explore
-              <br />
-              entire worlds of music.
-            </WhiteBoxText>
-          </WhiteBox>
-          <WhiteBox>
-            <WhiteBoxCircle>
-              <CircleIcon src='image/role-model.png' />
-            </WhiteBoxCircle>
-            <WhiteBoxTitle>Epic Music (Content ID)</WhiteBoxTitle>
-            <WhiteBoxText>
-              Give people shivers
-              <br />
-              with larger-than-life productions.
-            </WhiteBoxText>
-          </WhiteBox>
-        </WhiteBoxBlock>
-      </Wrap2>
+        <Wrap2>
+          <Wrap2Title>
+            Time to turn Your Music Dreams into{' '}
+            <OrangeSpanText>Reality</OrangeSpanText>
+          </Wrap2Title>
+          <Wrap2Text>
+            Become A Pro Composers has been built for composers ( and those who
+            want to become one! )<br />
+            around the world who seek to write music for :
+          </Wrap2Text>
+          <WhiteBoxBlock>
+            <WhiteBox>
+              <WhiteBoxCircle>
+                <CircleIcon1 src='image/soundtrack.png' />
+              </WhiteBoxCircle>
+              <WhiteBoxTitle>Film & TV</WhiteBoxTitle>
+              <WhiteBoxText>
+                Create atmosphare and
+                <br />
+                tell a story with sound.
+              </WhiteBoxText>
+            </WhiteBox>
+            <WhiteBox>
+              <WhiteBoxCircle>
+                <CircleIcon src='image/console.png' />
+              </WhiteBoxCircle>
+              <WhiteBoxTitle>Video Game</WhiteBoxTitle>
+              <WhiteBoxText>
+                Build and explore
+                <br />
+                entire worlds of music.
+              </WhiteBoxText>
+            </WhiteBox>
+            <WhiteBox>
+              <WhiteBoxCircle>
+                <CircleIcon src='image/role-model.png' />
+              </WhiteBoxCircle>
+              <WhiteBoxTitle>Epic Music (Content ID)</WhiteBoxTitle>
+              <WhiteBoxText>
+                Give people shivers
+                <br />
+                with larger-than-life productions.
+              </WhiteBoxText>
+            </WhiteBox>
+          </WhiteBoxBlock>
+        </Wrap2>
+      </BackgroundWrap>
 
       <Wrap3>
         <ReadyBanner src='image/ready-banner.png' />
@@ -98,6 +102,31 @@ const Profile = () => {
   );
 };
 
+const BackgroundWrap = styled.div`
+  width: auto;
+  height: auto;
+  position: relative;
+`;
+
+const Background = styled.div`
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -10;
+  background-image: url('image/profile-background.png');
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
 const Wrap1 = styled.div`
   width: 800px;
   margin: 0 auto;
@@ -107,6 +136,7 @@ const Wrap1 = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
     margin-bottom: 0px;
+    padding: 20px 0 0 0;
   }
 
   @media (max-width: 768px) {
@@ -204,7 +234,7 @@ const BubbleTextBox = styled.div`
   margin-left: 30px;
 
   @media (max-width: 1024px) {
-    height: 360px;
+    height: 330px;
   }
 
   @media (max-width: 768px) {
@@ -225,6 +255,7 @@ const BubbleText = styled.div`
 
   @media (max-width: 1024px) {
     font-size: 17px;
+    padding: 20px 35px;
   }
 
   @media (max-width: 768px) {
@@ -245,7 +276,7 @@ const Wrap2 = styled.div`
   display: block;
 
   @media (max-width: 1024px) {
-    width: 92%;
+    width: 90%;
   }
 
   @media (max-width: 768px) {
@@ -262,6 +293,7 @@ const Wrap2Title = styled.div`
 
   @media (max-width: 1024px) {
     font-size: 34px;
+    margin-top: 0px;
   }
 
   @media (max-width: 768px) {
@@ -291,7 +323,7 @@ const Wrap2Text = styled.div`
 
 const WhiteBoxBlock = styled.div`
   width: 100%;
-  height: 350px;
+  height: 320px;
   display: flex;
   justify-content: space-between;
 
@@ -308,8 +340,8 @@ const WhiteBoxBlock = styled.div`
 `;
 
 const WhiteBox = styled.div`
-  width: 31.5%;
-  height: 350px;
+  width: 31%;
+  height: 320px;
   background-color: #ffffff;
   border-radius: 40px;
   display: flex;
@@ -318,7 +350,8 @@ const WhiteBox = styled.div`
   align-items: center;
 
   @media (max-width: 1024px) {
-    height: 280px;
+    height: 260px;
+    width: 32%;
   }
 
   @media (max-width: 768px) {
@@ -330,8 +363,8 @@ const WhiteBox = styled.div`
 `;
 
 const WhiteBoxCircle = styled.div`
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: #ffded2;
   margin-bottom: 20px;
@@ -351,7 +384,7 @@ const WhiteBoxCircle = styled.div`
 
 const CircleIcon = styled.img`
   width: auto;
-  height: 70px;
+  height: 60px;
 
   @media (max-width: 1024px) {
     width: auto;
@@ -365,11 +398,11 @@ const CircleIcon = styled.img`
 const CircleIcon1 = styled.img`
   margin-top: 10px;
   width: auto;
-  height: 70px;
+  height: 55px;
 
   @media (max-width: 1024px) {
     width: auto;
-    height: 60px;
+    height: 55px;
   }
 
   @media (max-width: 768px) {
@@ -379,7 +412,7 @@ const CircleIcon1 = styled.img`
 const WhiteBoxTitle = styled.div`
   font-family: 'Exo2-SemiBold';
   color: #fe5d26;
-  font-size: 23px;
+  font-size: 22px;
   margin: 0 auto;
   margin-bottom: 15px;
   text-align: center;
@@ -398,9 +431,9 @@ const WhiteBoxTitle = styled.div`
 const WhiteBoxText = styled.div`
   font-family: 'Exo2-Light';
   color: #5a5a5a;
-  font-size: 17px;
+  font-size: 15px;
   text-align: center;
-  line-height: 30px;
+  line-height: 25px;
 
   @media (max-width: 1024px) {
     line-height: 25px;
@@ -417,14 +450,14 @@ const Wrap3 = styled.div`
   height: 600px;
   overflow: hidden;
   position: relative;
-  margin: 60px 0;
+  margin: 60px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 1024px) {
     height: 500px;
-    margin: 30px 0;
+    margin: 30px 0 10px 0;
   }
 
   @media (max-width: 768px) {
