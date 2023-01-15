@@ -146,7 +146,7 @@ const BannerButton = styled.button`
   color: #000;
   border: none;
   cursor: pointer;
-  padding: 25px 55px;
+  padding: 20px 45px;
   box-shadow: rgba(254, 93, 38) -6px 6px 0 0, -6px 6px 0px 0px;
   position: relative;
   user-select: none;

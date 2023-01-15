@@ -24,7 +24,7 @@ const Profile = () => {
               </BubbleText>
               <BubbleText>
                 Orchestral music production can feel overwhelming - I know, I've
-                been there. There's so mush to learn, so many skills to master.
+                been there. There's so much to learn, so many skills to master.
               </BubbleText>
               <BubbleText>
                 That's why I made Become A Pro Composer. A learning hub where
@@ -40,9 +40,10 @@ const Profile = () => {
             <OrangeSpanText>Reality</OrangeSpanText>
           </Wrap2Title>
           <Wrap2Text>
-            Become A Pro Composers has been built for composers ( and those who
-            want to become one! )<br />
-            around the world who seek to write music for :
+            Become A Pro Composers has been built for composers (and those who
+            want to become one!)
+            <br />
+            around the world who seek to write music for:
           </Wrap2Text>
           <WhiteBoxBlock>
             <WhiteBox>
@@ -51,7 +52,7 @@ const Profile = () => {
               </WhiteBoxCircle>
               <WhiteBoxTitle>Film & TV</WhiteBoxTitle>
               <WhiteBoxText>
-                Create atmosphare and
+                Create atmosphere and
                 <br />
                 tell a story with sound.
               </WhiteBoxText>
@@ -60,7 +61,7 @@ const Profile = () => {
               <WhiteBoxCircle>
                 <CircleIcon src='image/console.png' />
               </WhiteBoxCircle>
-              <WhiteBoxTitle>Video Game</WhiteBoxTitle>
+              <WhiteBoxTitle>Video Games</WhiteBoxTitle>
               <WhiteBoxText>
                 Build and explore
                 <br />
@@ -91,7 +92,7 @@ const Profile = () => {
             It's not rocket science! Become A Pro Composer helps you discover
             your musical
             <br />
-            strength and bring your your music ti life with ease
+            strength and bring your music to life with ease.
           </ReadyText3>
           <ReadyText4>
             On any DAW. <span>No experience required.</span>
@@ -467,10 +468,10 @@ const Wrap3 = styled.div`
 `;
 
 const ReadyBanner = styled.img`
-  width: 2300px;
+  width: 1920px;
   height: auto;
   left: 50%;
-  top: 50%;
+  top: 51%;
   transform: translate(-50%, -50%);
   position: absolute;
   z-index: -10;

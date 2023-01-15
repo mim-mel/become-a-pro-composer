@@ -4,6 +4,9 @@ import './../../fonts/fonts.css';
 const HowToLeran = () => {
   return (
     <HowToLearnWrap>
+      <Triangle1 />
+      <Triangle2 />
+      <Triangle3 />
       <Title>
         <TitleSpan>Learn</TitleSpan> how to{' '}
         <TitleSpan>write Orchestral Music</TitleSpan> as a <br />
@@ -46,7 +49,7 @@ const HowToLeran = () => {
           <ContentText3>
             Free beginner guides and high-quality video tutorials on the most
             common music writing scenarios help you learn how to compose faster,
-            better and smarter. Are ypu ready to write your first orchestral
+            better and smarter. Are you ready to write your first orchestral
             masterpiece?
           </ContentText3>
           <ContentText4Block>
@@ -88,6 +91,7 @@ const HowToLeran = () => {
         retention
       </BannerMiniText>
 
+      {/* Content2 */}
       <ContentWrap grid='40% 40%'>
         <ContentTextBlock>
           <ContentIcon top='10%'>
@@ -121,7 +125,37 @@ const HowToLeran = () => {
         </Content2ImgBlock>
       </ContentWrap>
 
-      {/* Content2 */}
+      {/* Content3 */}
+      <ContentWrap grid='45% 40%' marginTop='70px'>
+        <Content1Wrap>
+          <Content3ImgBlock>
+            <Content3Img />
+          </Content3ImgBlock>
+        </Content1Wrap>
+        <ContentTextBlock order='-1'>
+          <ContentIcon top='10%'>
+            <ContentIconImg
+              marginBottom='4px'
+              url='image/how-icon1.png'
+              marginLeft='4px'
+            />
+          </ContentIcon>
+          <ContentText1>SHARE: GET IN TOUCH!</ContentText1>
+          <ContentText2>
+            Your own
+            <br /> personal feedback
+          </ContentText2>
+          <ContentText3>
+            Post your results and receive feedback from the Become A Pro
+            Composer community. Connect with composers of all levels and grow
+            together. We are ready when you are.
+          </ContentText3>
+          <ContentText4Block>
+            <ContentText4>Take me to the Community</ContentText4>
+            <ContentText4Img />
+          </ContentText4Block>
+        </ContentTextBlock>
+      </ContentWrap>
     </HowToLearnWrap>
   );
 };
@@ -134,6 +168,65 @@ const HowToLearnWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+`;
+
+const Triangle1 = styled.div`
+  width: 400px;
+  height: 350px;
+  background-image: url(image/triangle-orange.png);
+  background-size: 400px;
+  position: absolute;
+  top: 4%;
+  left: 3%;
+  z-index: -10;
+
+  @media (max-width: 1024px) {
+    width: 300px;
+    height: 250px;
+    background-size: 300px;
+    top: 4%;
+    left: -9%;
+  }
+`;
+
+const Triangle2 = styled.div`
+  width: 150px;
+  height: 130px;
+  background-image: url(image/triangle-grey.png);
+  background-size: 150px;
+  position: absolute;
+  top: 13%;
+  left: 62%;
+  z-index: -10;
+
+  @media (max-width: 1024px) {
+    top: 10%;
+    left: 62%;
+  }
+`;
+
+const Triangle3 = styled.div`
+  width: 500px;
+  height: 40px;
+  background-image: url(image/triangle-orange.png);
+  background-size: 500px;
+  position: absolute;
+  top: 62%;
+  left: 79%;
+  z-index: -10;
+
+  @media (max-width: 1024px) {
+    width: 300px;
+    height: 260px;
+    background-size: 300px;
+    top: 65%;
+    left: 79%;
+  }
+
+  @media (max-width: 760px) {
+    left: 75%;
+  }
 `;
 
 const Background = styled.div`
@@ -186,6 +279,7 @@ const ContentWrap = styled.div`
   display: grid;
   grid-template-columns: ${props => props.grid};
   justify-content: space-between;
+  margin-top: ${props => props.marginTop};
 
   @media (max-width: 1024px) {
     grid-template-columns: 45% 45%;
@@ -202,6 +296,10 @@ const Content1Wrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;
+
+  /* @media (max-width: 760px) {
+    order: -1;
+  } */
 `;
 
 const Content1FotosBlock = styled.div`
@@ -236,6 +334,7 @@ const ContentTextBlock = styled.div`
 
   @media (max-width: 760px) {
     padding-left: 0;
+    order: ${props => props.order};
   }
 `;
 
@@ -354,7 +453,7 @@ const LearnBanner = styled.div`
   }
 
   @media (max-width: 760px) {
-    margin-top: 30px;
+    margin-top: 50px;
     height: 150px;
   }
 `;
@@ -475,7 +574,7 @@ const BannerMiniText = styled.div`
 
   @media (max-width: 760px) {
     width: 80%;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 `;
 
@@ -500,6 +599,32 @@ const Content2Img = styled.img`
   @media (max-width: 1024px) {
     height: 440px;
     width: auto;
+  }
+`;
+
+const Content3ImgBlock = styled.div`
+  width: 100%;
+  margin-top: 40px;
+  height: 310px;
+  margin-left: auto;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+  }
+
+  @media (max-width: 760px) {
+  }
+`;
+
+const Content3Img = styled.img`
+  background-color: aqua;
+  width: 100%;
+  height: 310px;
+  background-image: url(image/how-content3-img.jpg);
+
+  @media (max-width: 1024px) {
   }
 `;
 

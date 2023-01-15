@@ -1,4 +1,5 @@
 import Banner from './Banner';
+import ConnectBanner from './ConnectBanner';
 import HowToLeran from './HowToLearn';
 import Profile from './Profile';
 
@@ -8,6 +9,7 @@ const MainPage = () => {
       <Banner />
       <Profile />
       <HowToLeran />
+      <ConnectBanner />
     </>
   );
 };
