@@ -208,7 +208,7 @@ const Triangle2 = styled.div`
 
 const Triangle3 = styled.div`
   width: 500px;
-  height: 40px;
+  height: 400px;
   background-image: url(image/triangle-orange.png);
   background-size: 500px;
   position: absolute;
@@ -323,7 +323,7 @@ const Content1Foto = styled.img`
   margin: ${props => props.margin};
 `;
 
-const ContentTextBlock = styled.div`
+export const ContentTextBlock = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -377,7 +377,7 @@ const ContentIconImg = styled.div`
   }
 `;
 
-const ContentText1 = styled.div`
+export const ContentText1 = styled.div`
   font-size: 13px;
   color: #fe5d26;
   font-family: 'Roboto-Bold';
@@ -388,7 +388,7 @@ const ContentText1 = styled.div`
   }
 `;
 
-const ContentText2 = styled.div`
+export const ContentText2 = styled.div`
   font-size: 30px;
   color: #0d1f2d;
   font-family: 'Exo2-Bold';
@@ -396,10 +396,11 @@ const ContentText2 = styled.div`
 
   @media (max-width: 760px) {
     font-size: 23px;
+    margin-bottom: 20px;
   }
 `;
 
-const ContentText3 = styled.div`
+export const ContentText3 = styled.div`
   font-size: 15px;
   color: #686868;
   font-family: 'Exo2-Light';
@@ -409,14 +410,15 @@ const ContentText3 = styled.div`
   @media (max-width: 760px) {
     font-size: 13px;
     line-height: 19px;
+    margin-bottom: 20px;
   }
 `;
 
-const ContentText4Block = styled.div`
+export const ContentText4Block = styled.div`
   display: flex;
 `;
 
-const ContentText4 = styled.div`
+export const ContentText4 = styled.div`
   font-size: 13px;
   color: #fe5d26;
   font-family: 'Exo2-Bold';
@@ -426,7 +428,7 @@ const ContentText4 = styled.div`
   }
 `;
 
-const ContentText4Img = styled.div`
+export const ContentText4Img = styled.div`
   width: 11px;
   height: 11px;
   margin-left: 5px;

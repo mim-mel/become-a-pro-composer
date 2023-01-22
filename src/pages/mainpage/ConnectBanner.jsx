@@ -69,11 +69,10 @@ const BannerWrap = styled.div`
   height: 570px;
   position: relative;
   margin-top: 20px;
-  margin-bottom: 50px;
   overflow-x: hidden;
 
   @media (max-width: 760px) {
-    height: 800px;
+    height: 760px;
   }
 `;
 
@@ -88,7 +87,7 @@ const BannerBack = styled.div`
   z-index: -10;
 
   @media (max-width: 760px) {
-    height: 800px;
+    height: 760px;
     background-repeat: no-repeat;
   }
 `;
