@@ -1,3 +1,4 @@
+import Footer from '../../components/Footer';
 import Banner from './Banner';
 import ConnectBanner from './ConnectBanner';
 import HowToLeran from './HowToLearn';
@@ -12,6 +13,7 @@ const MainPage = () => {
       <HowToLeran />
       <ConnectBanner />
       <LoveUs />
+      <Footer />
     </>
   );
 };
