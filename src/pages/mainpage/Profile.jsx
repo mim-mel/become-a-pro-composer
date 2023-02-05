@@ -40,7 +40,7 @@ const Profile = () => {
             <OrangeSpanText>Reality</OrangeSpanText>
           </Wrap2Title>
           <Wrap2Text>
-            Become A Pro Composers has been built for composers (and those who
+            Become A Pro Composer has been built for composers (and those who
             want to become one!)
             <br />
             around the world who seek to write music for:
@@ -131,26 +131,24 @@ const Background = styled.div`
 const Wrap1 = styled.div`
   width: 800px;
   margin: 0 auto;
-  padding: 20px 0;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
   @media (max-width: 1024px) {
     width: 100%;
     margin-bottom: 0px;
-    padding: 20px 0 0 0;
   }
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 0;
   }
 `;
 
 const ProfileText = styled.h2`
   text-align: center;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-family: 'Exo2-Bold';
+  color: #0d1f2d;
   font-weight: 900;
   font-size: 50px;
   letter-spacing: -0.5px;
@@ -191,7 +189,7 @@ const SmallSpanText = styled.span`
 
 const FotoTextWrap = styled.div`
   width: 95%;
-  height: 330px;
+  height: 300px;
   margin: 20px auto 0 auto;
   display: flex;
   justify-content: space-between;
@@ -287,10 +285,11 @@ const Wrap2 = styled.div`
 
 const Wrap2Title = styled.div`
   font-family: 'Exo2-Bold';
+  color: #0d1f2d;
   font-size: 40px;
   text-align: center;
-  margin-bottom: 47px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-top: 10px;
 
   @media (max-width: 1024px) {
     font-size: 34px;
@@ -335,7 +334,7 @@ const WhiteBoxBlock = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    height: 1000px;
+    height: 970px;
     display: block;
   }
 `;
@@ -451,19 +450,16 @@ const Wrap3 = styled.div`
   height: 600px;
   overflow: hidden;
   position: relative;
-  margin: 60px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
   @media (max-width: 1024px) {
     height: 500px;
-    margin: 30px 0 10px 0;
   }
 
   @media (max-width: 768px) {
     height: 450px;
-    margin: 0;
   }
 `;
 

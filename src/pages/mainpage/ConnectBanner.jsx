@@ -16,7 +16,7 @@ const ConnectBanner = () => {
             question is wrong to ask. Nor is the most unfinished demo not good
             enough for feedback. Learn and grow!
           </Text>
-          <BannerButton>JOIN OUR DISCORD</BannerButton>
+          <BannerButton>JOIN DISCORD</BannerButton>
         </TextBlock>
         <WhiteBoxBlock>
           <WhiteBox1>
@@ -82,8 +82,9 @@ const BannerBack = styled.div`
   background-image: url(image/connect-banner.png);
   background-size: 1920px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -10;
 
   @media (max-width: 760px) {
@@ -190,14 +191,14 @@ const Text = styled.div`
 `;
 
 const BannerButton = styled.button`
-  width: 190px;
+  width: 170px;
   font-size: 16px;
   font-family: 'Roboto-Bold';
   letter-spacing: 0px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
-  color: #000;
+  color: #0d1f2d;
   border: none;
   cursor: pointer;
   padding: 20px 17px;

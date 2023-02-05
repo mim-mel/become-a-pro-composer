@@ -18,7 +18,7 @@ const HowToLeran = () => {
       </TitleMiniText>
 
       {/* Content1 */}
-      <ContentWrap grid='45% 40%'>
+      <ContentWrap grid='43% 43%'>
         <Content1Wrap>
           <Content1FotosBlock columns='55% 40%' bottom='20px'>
             <Content1Foto src='image/composer1.jpg' alt='composer-img' />
@@ -126,7 +126,7 @@ const HowToLeran = () => {
       </ContentWrap>
 
       {/* Content3 */}
-      <ContentWrap grid='45% 40%' marginTop='70px'>
+      <ContentWrap grid='43% 43%' marginTop='70px'>
         <Content1Wrap>
           <Content3ImgBlock>
             <Content3Img />
@@ -169,6 +169,11 @@ const HowToLearnWrap = styled.div`
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  top: -50px;
+
+  @media (max-width: 760px) {
+    top: 0px;
+  }
 `;
 
 const Triangle1 = styled.div`
@@ -378,7 +383,7 @@ const ContentIconImg = styled.div`
 `;
 
 export const ContentText1 = styled.div`
-  font-size: 13px;
+  font-size: 15px;
   color: #fe5d26;
   font-family: 'Roboto-Bold';
   margin-bottom: 25px;
@@ -389,7 +394,7 @@ export const ContentText1 = styled.div`
 `;
 
 export const ContentText2 = styled.div`
-  font-size: 30px;
+  font-size: 35px;
   color: #0d1f2d;
   font-family: 'Exo2-Bold';
   margin-bottom: 25px;
@@ -401,11 +406,11 @@ export const ContentText2 = styled.div`
 `;
 
 export const ContentText3 = styled.div`
-  font-size: 15px;
+  font-size: 17px;
   color: #686868;
   font-family: 'Exo2-Light';
   line-height: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 
   @media (max-width: 760px) {
     font-size: 13px;
@@ -419,7 +424,7 @@ export const ContentText4Block = styled.div`
 `;
 
 export const ContentText4 = styled.div`
-  font-size: 13px;
+  font-size: 15px;
   color: #fe5d26;
   font-family: 'Exo2-Bold';
 

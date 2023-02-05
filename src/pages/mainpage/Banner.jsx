@@ -103,7 +103,7 @@ const BannerTitle = styled.h1`
   font-family: 'Bloomer-Regular';
   letter-spacing: 0.1vw;
   font-weight: 400;
-  margin: 1vh 0 4vh 0;
+  margin: 10px 0 15px 0;
 
   @media (max-width: 1024px) {
     font-size: 6vw;
@@ -139,7 +139,7 @@ const BannerButton = styled.button`
   font-size: 16px;
   font-family: 'Roboto-Bold';
   letter-spacing: 0.5px;
-  margin: 50px 0 0 8px;
+  margin: 35px 0 0 8px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
@@ -152,6 +152,7 @@ const BannerButton = styled.button`
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  //백그라운드 하나 더 만들고 쉐도우 없애기
 
   &:hover {
     box-shadow: 0px 0px 0px 0px;
@@ -166,22 +167,24 @@ const BannerButton = styled.button`
 
   @media (max-width: 768px) {
     display: block;
-    margin: 4vh auto 0 auto;
+    margin: 30px auto 0 auto;
     padding: 5vw 10vw;
   }
 `;
 
 const BottonBottomText = styled.div`
   color: white;
-  font-family: 'Roboto-Thin';
-  font-size: 12.5px;
-  margin: 25px 0 0 10px;
+  font-family: 'Exo2-Light';
+  font-size: 12px;
+  margin: 15px 0 0 10px;
+  opacity: 0.5;
 
   @media (max-width: 1024px) {
     margin: 20px 0 0 10px;
   }
 
   @media (max-width: 768px) {
+    font-size: 11.5px;
     margin: 18px 0 0 0;
     text-align: center;
   }
