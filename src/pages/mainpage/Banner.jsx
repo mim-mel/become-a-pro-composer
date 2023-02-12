@@ -1,10 +1,18 @@
-import styled from 'styled-components';
 import './../../fonts/fonts.css';
+import { ReactComponent as Wave } from './wave.svg';
+import styled, { keyframes } from 'styled-components';
 
 const Banner = () => {
   return (
     <BackGround>
-      <BannerImg src='image/banner-man.jpg' alt='banner-man' />
+      <WaveBackground />
+      <WaveContainer>
+        <Wave />
+      </WaveContainer>
+      <CircleBox>
+        <CircleImg1 src='image/blue-rings.png' alt='bluecircle' />
+        <CircleImg2 src='image/circle-man.png' alt='bluecircle' />
+      </CircleBox>
       <BannerContnents>
         <BannerTitle>
           BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
@@ -20,52 +28,72 @@ const Banner = () => {
 };
 
 const BackGround = styled.div`
-  background-image: url('image/banner-background.png');
-  height: 800px;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: inline-block;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  width: 100%;
+  height: 805px;
+  vertical-align: middle;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+`;
+
+const WaveContainer = styled.div`
+  width: 100%;
+  position: absolute;
+  top: 54%;
+  left: 0;
 
   @media (max-width: 1400px) {
-  }
-
-  @media (max-width: 1024px) {
-    height: 55vh;
-  }
-
-  @media (max-width: 768px) {
-    height: 100vh;
+    top: 64%;
   }
 `;
 
-const BannerImg = styled.img`
-  width: 1150px;
-  height: auto;
+const WaveBackground = styled.div`
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 0;
+  background-color: #0d1f2d;
+`;
+
+const CircleBox = styled.div`
+  position: relative;
+  left: 50%;
+  top: 40%;
+  width: 580px;
+  height: 580px;
+`;
+
+const CircleImg1 = styled.img`
   position: absolute;
   left: 50%;
-  top: 20%;
-  transform: translate(-50%, -20%);
+  height: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-47.5%, -47.5%);
+`;
 
-  @media (max-width: 1400px) {
-    width: 100%;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -30%);
-  }
+const CircleAni = keyframes`
+  0% {
+    transform: translate(-50%, -48%);
+	}
+	50% {
+    transform: translate(-50%, -51%);
+	}
+	100% {
+    transform: translate(-50%, -48%);
+	}
+`;
 
-  @media (max-width: 1024px) {
-    width: 100vw;
-  }
-
-  @media (max-width: 768px) {
-    width: 160vw;
-    left: 105%;
-    top: 5%;
-    transform: translate(-105%, -5%);
-  }
+const CircleImg2 = styled.img`
+  position: absolute;
+  left: 50%;
+  height: 50%;
+  width: 70%;
+  height: 70%;
+  transform: translate(-50%, -48%);
+  animation: ${CircleAni} 5.5s ease-in-out infinite;
 `;
 
 const BannerContnents = styled.div`
