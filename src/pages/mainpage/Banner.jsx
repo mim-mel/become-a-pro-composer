@@ -23,38 +23,79 @@ const Banner = () => {
           Instant access. No sign-up required.
         </BottonBottomText>
       </BannerContnents>
+      <MidiNoteWrap>
+        <MidiNoteWrap2>
+          <Group1>
+            <Note1 src='image/note1.png' />
+            <Note2 src='image/note2.png' />
+            <Note3 src='image/note3.png' />
+            <Note4 src='image/note4.png' />
+            <Note5 src='image/note5.png' />
+          </Group1>
+          <Group1>
+            <Note1 src='image/note1.png' />
+            <Note2 src='image/note2.png' />
+            <Note3 src='image/note3.png' />
+            <Note4 src='image/note4.png' />
+            <Note5 src='image/note5.png' />
+          </Group1>
+          <Group2></Group2>
+        </MidiNoteWrap2>
+      </MidiNoteWrap>
     </BackGround>
   );
 };
+
+const CircleAni = keyframes`
+  0% {
+    transform: translate(-50%, -48%);
+	}
+	50% {
+    transform: translate(-50%, -51%);
+	}
+	100% {
+    transform: translate(-50%, -48%);
+	}
+`;
+
+const MidiNoteAni = keyframes`
+  0% {
+    transform: translate(-50%, 0);
+	}
+	100% {
+    transform: translate(50%, 0);
+	}
+`;
 
 const BackGround = styled.div`
   display: inline-block;
   position: relative;
   width: 100%;
-  height: 805px;
+  height: 900px;
   vertical-align: middle;
-  overflow: hidden;
-  top: 0;
-  left: 0;
 `;
 
 const WaveContainer = styled.div`
   width: 100%;
   position: absolute;
-  top: 54%;
+  top: 590px;
   left: 0;
 
-  @media (max-width: 1400px) {
-    top: 64%;
+  @media (max-width: 3100px) {
+    top: 690px;
   }
 `;
 
 const WaveBackground = styled.div`
   width: 100%;
-  height: 70%;
+  height: 600px;
   position: absolute;
   top: 0;
   background-color: #0d1f2d;
+
+  @media (max-width: 3100px) {
+    height: 700px;
+  }
 `;
 
 const CircleBox = styled.div`
@@ -69,21 +110,10 @@ const CircleImg1 = styled.img`
   position: absolute;
   left: 50%;
   height: 50%;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   transform: translate(-47.5%, -47.5%);
-`;
-
-const CircleAni = keyframes`
-  0% {
-    transform: translate(-50%, -48%);
-	}
-	50% {
-    transform: translate(-50%, -51%);
-	}
-	100% {
-    transform: translate(-50%, -48%);
-	}
+  z-index: 80;
 `;
 
 const CircleImg2 = styled.img`
@@ -94,6 +124,7 @@ const CircleImg2 = styled.img`
   height: 70%;
   transform: translate(-50%, -48%);
   animation: ${CircleAni} 5.5s ease-in-out infinite;
+  z-index: 100;
 `;
 
 const BannerContnents = styled.div`
@@ -216,6 +247,84 @@ const BottonBottomText = styled.div`
     margin: 18px 0 0 0;
     text-align: center;
   }
+`;
+
+const MidiNoteWrap = styled.div`
+  width: 1600px;
+  height: 750px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+
+  @media (max-width: 1920px) {
+    width: 250%;
+  }
+`;
+
+const MidiNoteWrap2 = styled.div`
+  position: relative;
+  width: 3200px;
+  height: 750px;
+  overflow: hidden;
+  display: grid;
+  left: 50%;
+  transform: translate(-50%, 0);
+  grid-template-columns: 48% 48%;
+
+  @media (max-width: 1920px) {
+    width: 100%;
+  }
+`;
+
+const Group1 = styled.div`
+  width: 100%;
+  height: 20%;
+  position: relative;
+  top: 15%;
+  opacity: 0.2;
+  margin-right: 30px;
+  animation: ${MidiNoteAni} 140s linear infinite;
+`;
+
+const Note1 = styled.img`
+  position: absolute;
+  left: 250px;
+  top: 90px;
+`;
+
+const Note2 = styled.img`
+  position: absolute;
+  left: 520px;
+  top: 65px;
+`;
+
+const Note3 = styled.img`
+  position: absolute;
+  left: 680px;
+  top: 40px;
+`;
+
+const Note4 = styled.img`
+  position: absolute;
+  left: 770px;
+  top: 85px;
+`;
+
+const Note5 = styled.img`
+  position: absolute;
+  left: 1350px;
+  top: 40px;
+`;
+
+const Group2 = styled.div`
+  width: 100%;
+  height: 20%;
+  position: relative;
+  /* background-color: #5f7f7f; */
+  opacity: 0.3;
+  top: 50%;
 `;
 
 export default Banner;
