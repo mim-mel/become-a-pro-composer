@@ -9,20 +9,6 @@ const Banner = () => {
       <WaveContainer>
         <Wave />
       </WaveContainer>
-      <CircleBox>
-        <CircleImg1 src='image/blue-rings.png' alt='bluecircle' />
-        <CircleImg2 src='image/circle-man.png' alt='bluecircle' />
-      </CircleBox>
-      <BannerContnents>
-        <BannerTitle>
-          BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
-        </BannerTitle>
-        <BannerText>Orchestral music production. Made easy.</BannerText>
-        <BannerButton>GET STARTED</BannerButton>
-        <BottonBottomText>
-          Instant access. No sign-up required.
-        </BottonBottomText>
-      </BannerContnents>
       <MidiNoteWrap>
         <MidiNoteWrap2>
           <Group1>
@@ -39,9 +25,32 @@ const Banner = () => {
             <Note4 src='image/note4.png' />
             <Note5 src='image/note5.png' />
           </Group1>
-          <Group2></Group2>
+          <Group2>
+            <Note6 src='image/note6.png' />
+            <Note7 src='image/note7.png' />
+            <Note8 src='image/note8.png' />
+          </Group2>
+          <Group2>
+            <Note6 src='image/note6.png' />
+            <Note7 src='image/note7.png' />
+            <Note8 src='image/note8.png' />
+          </Group2>
         </MidiNoteWrap2>
       </MidiNoteWrap>
+      <CircleBox>
+        <CircleImg1 src='image/blue-rings.png' alt='bluecircle' />
+        <CircleImg2 src='image/circle-man.png' alt='bluecircle' />
+      </CircleBox>
+      <BannerContnents>
+        <BannerTitle>
+          BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
+        </BannerTitle>
+        <BannerText>Orchestral music production. Made easy.</BannerText>
+        <BannerButton>GET STARTED</BannerButton>
+        <BottonBottomText>
+          Instant access. No sign-up required.
+        </BottonBottomText>
+      </BannerContnents>
     </BackGround>
   );
 };
@@ -51,7 +60,7 @@ const CircleAni = keyframes`
     transform: translate(-50%, -48%);
 	}
 	50% {
-    transform: translate(-50%, -51%);
+    transform: translate(-50%, -52%);
 	}
 	100% {
     transform: translate(-50%, -48%);
@@ -84,6 +93,10 @@ const WaveContainer = styled.div`
   @media (max-width: 3100px) {
     top: 690px;
   }
+
+  @media (max-width: 760px) {
+    top: 750px;
+  }
 `;
 
 const WaveBackground = styled.div`
@@ -96,6 +109,10 @@ const WaveBackground = styled.div`
   @media (max-width: 3100px) {
     height: 700px;
   }
+
+  @media (max-width: 760px) {
+    height: 760px;
+  }
 `;
 
 const CircleBox = styled.div`
@@ -104,6 +121,21 @@ const CircleBox = styled.div`
   top: 40%;
   width: 580px;
   height: 580px;
+
+  @media (max-width: 1024px) {
+    left: 45%;
+    top: 40%;
+    width: 480px;
+    height: 480px;
+  }
+
+  @media (max-width: 760px) {
+    left: 50%;
+    top: 25%;
+    width: 370px;
+    height: 370px;
+    transform: translate(-50%, 0);
+  }
 `;
 
 const CircleImg1 = styled.img`
@@ -144,8 +176,8 @@ const BannerContnents = styled.div`
   @media (max-width: 1024px) {
     padding: 0;
     width: 78vw;
-    top: 10%;
-    transform: translate(-50%, 10%);
+    top: 16%;
+    transform: translate(-50%, 16%);
   }
 
   @media (max-width: 768px) {
@@ -228,6 +260,7 @@ const BannerButton = styled.button`
     display: block;
     margin: 30px auto 0 auto;
     padding: 5vw 10vw;
+    z-index: 100;
   }
 `;
 
@@ -285,46 +318,114 @@ const Group1 = styled.div`
   top: 15%;
   opacity: 0.2;
   margin-right: 30px;
-  animation: ${MidiNoteAni} 140s linear infinite;
+  animation: ${MidiNoteAni} 200s linear infinite;
+
+  @media (max-width: 760px) {
+    animation: ${MidiNoteAni} 100s linear infinite;
+  }
 `;
 
 const Note1 = styled.img`
   position: absolute;
-  left: 250px;
+  left: 550px;
   top: 90px;
+
+  @media (max-width: 760px) {
+    left: 5%;
+  }
 `;
 
 const Note2 = styled.img`
   position: absolute;
-  left: 520px;
+  left: 820px;
   top: 65px;
+
+  @media (max-width: 760px) {
+    left: 25%;
+    top: 35px;
+  }
 `;
 
 const Note3 = styled.img`
   position: absolute;
-  left: 680px;
+  left: 980px;
   top: 40px;
+
+  @media (max-width: 760px) {
+    left: 45%;
+  }
 `;
 
 const Note4 = styled.img`
   position: absolute;
-  left: 770px;
+  left: 1070px;
   top: 85px;
+
+  @media (max-width: 760px) {
+    left: 75%;
+  }
 `;
 
 const Note5 = styled.img`
   position: absolute;
-  left: 1350px;
+  left: 1650px;
   top: 40px;
+
+  @media (max-width: 760px) {
+    left: 85%;
+    top: 10px;
+  }
 `;
 
 const Group2 = styled.div`
   width: 100%;
   height: 20%;
   position: relative;
-  /* background-color: #5f7f7f; */
-  opacity: 0.3;
-  top: 50%;
+  top: 60%;
+  opacity: 0.2;
+  margin-right: 30px;
+  animation: ${MidiNoteAni} 70s linear infinite;
+
+  @media (max-width: 1920px) {
+    top: 50%;
+  }
+
+  @media (max-width: 760px) {
+    animation: ${MidiNoteAni} 80s linear infinite;
+    opacity: 0.2;
+  }
 `;
+
+const Note6 = styled.img`
+  position: absolute;
+  left: 610px;
+  top: 40px;
+
+  @media (max-width: 760px) {
+    left: 5%;
+    top: 120px;
+  }
+`
+
+const Note7 = styled.img`
+  position: absolute;
+  left: 1010px;
+  top: -10px;
+
+  @media (max-width: 760px) {
+    left: 35%;
+    top: -30px;
+  }
+`
+
+const Note8 = styled.img`
+  position: absolute;
+  left: 1400px;
+  top: 10px;
+
+  @media (max-width: 760px) {
+    left: 65%;
+  }
+`
 
 export default Banner;
