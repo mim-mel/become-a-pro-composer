@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import './../../fonts/fonts.css';
+import { Fade } from 'react-awesome-reveal';
 
 const Profile = () => {
   return (
@@ -7,78 +8,105 @@ const Profile = () => {
       <BackgroundWrap>
         <Background />
         <Wrap1>
-          <ProfileText>
-            Creating Orchestral Music has <br />
-            <OrangeSpanText>never been easier</OrangeSpanText>
-          </ProfileText>
-          <SmallText>
-            If we can do it, <SmallSpanText>so can you</SmallSpanText>.
-            Seriously.
-          </SmallText>
-          <FotoTextWrap>
-            <ProfilFoto src='image/profile.jpg' alt='profile' />
-            <BubbleTextBox>
-              <BubbleText>
-                Hey! My name is Kevin 👋 and I'm the creator of Become A Pro
-                Composer.
-              </BubbleText>
-              <BubbleText>
-                Orchestral music production can feel overwhelming - I know, I've
-                been there. There's so much to learn, so many skills to master.
-              </BubbleText>
-              <BubbleText>
-                That's why I made Become A Pro Composer. A learning hub where
-                you grow as a composer and write better music.
-              </BubbleText>
-            </BubbleTextBox>
-          </FotoTextWrap>
+          <Fade direction={'up'} duration={700} triggerOnce={true}>
+            <>
+              <ProfileText>
+                Creating Orchestral Music has <br />
+                <OrangeSpanText>never been easier</OrangeSpanText>
+              </ProfileText>
+              <SmallText>
+                If we can do it, <SmallSpanText>so can you</SmallSpanText>.
+                Seriously.
+              </SmallText>
+            </>
+          </Fade>
+          <Fade direction={'up'} duration={700} triggerOnce={true}>
+            <FotoTextWrap>
+              <ProfilFoto src='image/profile.jpg' alt='profile' />
+              <BubbleTextBox>
+                <BubbleText>
+                  Hey! My name is Kevin 👋 and I'm the creator of Become A Pro
+                  Composer.
+                </BubbleText>
+                <BubbleText>
+                  Orchestral music production can feel overwhelming - I know,
+                  I've been there. There's so much to learn, so many skills to
+                  master.
+                </BubbleText>
+                <BubbleText>
+                  That's why I made Become A Pro Composer. A learning hub where
+                  you grow as a composer and write better music.
+                </BubbleText>
+              </BubbleTextBox>
+            </FotoTextWrap>
+          </Fade>
         </Wrap1>
 
         <Wrap2>
-          <Wrap2Title>
-            Time to turn Your Music Dreams into{' '}
-            <OrangeSpanText>Reality</OrangeSpanText>
-          </Wrap2Title>
-          <Wrap2Text>
-            Become A Pro Composer has been built for composers (and those who
-            want to become one!)
-            <br />
-            around the world who seek to write music for:
-          </Wrap2Text>
+          <Fade direction={'up'} duration={700} triggerOnce={true}>
+            <>
+              <Wrap2Title>
+                Time to turn Your Music Dreams into{' '}
+                <OrangeSpanText>Reality</OrangeSpanText>
+              </Wrap2Title>
+              <Wrap2Text>
+                Become A Pro Composer has been built for composers (and those
+                who want to become one!)
+                <br />
+                around the world who seek to write music for:
+              </Wrap2Text>
+            </>
+          </Fade>
           <WhiteBoxBlock>
-            <WhiteBox>
-              <WhiteBoxCircle>
-                <CircleIcon1 src='image/soundtrack.png' />
-              </WhiteBoxCircle>
-              <WhiteBoxTitle>Film & TV</WhiteBoxTitle>
-              <WhiteBoxText>
-                Create atmosphere and
-                <br />
-                tell a story with sound.
-              </WhiteBoxText>
-            </WhiteBox>
-            <WhiteBox>
-              <WhiteBoxCircle>
-                <CircleIcon src='image/console.png' />
-              </WhiteBoxCircle>
-              <WhiteBoxTitle>Video Games</WhiteBoxTitle>
-              <WhiteBoxText>
-                Build and explore
-                <br />
-                entire worlds of music.
-              </WhiteBoxText>
-            </WhiteBox>
-            <WhiteBox>
-              <WhiteBoxCircle>
-                <CircleIcon src='image/role-model.png' />
-              </WhiteBoxCircle>
-              <WhiteBoxTitle>Epic Music (Content ID)</WhiteBoxTitle>
-              <WhiteBoxText>
-                Give people shivers
-                <br />
-                with larger-than-life productions.
-              </WhiteBoxText>
-            </WhiteBox>
+            <Fade direction={'up'} duration={1000} triggerOnce={true} delay={0}>
+              <WhiteBox>
+                <WhiteBoxCircle>
+                  <CircleIcon1 src='image/soundtrack.png' />
+                </WhiteBoxCircle>
+                <WhiteBoxTitle>Film & TV</WhiteBoxTitle>
+                <WhiteBoxText>
+                  Create atmosphere and
+                  <br />
+                  tell a story with sound.
+                </WhiteBoxText>
+              </WhiteBox>
+            </Fade>
+            <Fade
+              direction={'up'}
+              duration={1000}
+              triggerOnce={true}
+              delay={300}
+            >
+              <WhiteBox>
+                <WhiteBoxCircle>
+                  <CircleIcon src='image/console.png' />
+                </WhiteBoxCircle>
+                <WhiteBoxTitle>Video Games</WhiteBoxTitle>
+                <WhiteBoxText>
+                  Build and explore
+                  <br />
+                  entire worlds of music.
+                </WhiteBoxText>
+              </WhiteBox>
+            </Fade>
+            <Fade
+              direction={'up'}
+              duration={1000}
+              triggerOnce={true}
+              delay={600}
+            >
+              <WhiteBox>
+                <WhiteBoxCircle>
+                  <CircleIcon src='image/role-model.png' />
+                </WhiteBoxCircle>
+                <WhiteBoxTitle>Epic Music (Content ID)</WhiteBoxTitle>
+                <WhiteBoxText>
+                  Give people shivers
+                  <br />
+                  with larger-than-life productions.
+                </WhiteBoxText>
+              </WhiteBox>
+            </Fade>
           </WhiteBoxBlock>
         </Wrap2>
       </BackgroundWrap>
@@ -340,7 +368,7 @@ const WhiteBoxBlock = styled.div`
 `;
 
 const WhiteBox = styled.div`
-  width: 31%;
+  width: 310px;
   height: 320px;
   background-color: #ffffff;
   border-radius: 40px;
@@ -351,7 +379,7 @@ const WhiteBox = styled.div`
 
   @media (max-width: 1024px) {
     height: 260px;
-    width: 32%;
+    width: 237px;
   }
 
   @media (max-width: 768px) {

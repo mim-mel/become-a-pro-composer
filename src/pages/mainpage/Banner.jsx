@@ -1,6 +1,7 @@
 import './../../fonts/fonts.css';
 import { ReactComponent as Wave } from './wave.svg';
 import styled, { keyframes } from 'styled-components';
+import { Fade } from 'react-awesome-reveal';
 
 const Banner = () => {
   return (
@@ -42,14 +43,20 @@ const Banner = () => {
         <CircleImg2 src='image/circle-man.png' alt='bluecircle' />
       </CircleBox>
       <BannerContnents>
-        <BannerTitle>
-          BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
-        </BannerTitle>
-        <BannerText>Orchestral music production. Made easy.</BannerText>
-        <BannerButton>GET STARTED</BannerButton>
-        <BottonBottomText>
-          Instant access. No sign-up required.
-        </BottonBottomText>
+        <Fade direction={'up'} duration={1200} triggerOnce={true}>
+          <BannerTitle>
+            BECOME A<br /> <TitleSpan>PRO COMPOSER!</TitleSpan>
+          </BannerTitle>
+        </Fade>
+        <Fade direction={'up'} delay={300} triggerOnce={true}>
+          <BannerText>Orchestral music production. Made easy.</BannerText>
+        </Fade>
+        <Fade direction={'up'} delay={300} duration={800} triggerOnce={true}>
+          <BannerButton>GET STARTED</BannerButton>
+          <BottonBottomText>
+            Instant access. No sign-up required.
+          </BottonBottomText>
+        </Fade>
       </BannerContnents>
     </BackGround>
   );
@@ -82,6 +89,7 @@ const BackGround = styled.div`
   width: 100%;
   height: 900px;
   vertical-align: middle;
+  overflow: hidden;
 `;
 
 const WaveContainer = styled.div`
@@ -300,7 +308,6 @@ const MidiNoteWrap2 = styled.div`
   position: relative;
   width: 3200px;
   height: 750px;
-  overflow: hidden;
   display: grid;
   left: 50%;
   transform: translate(-50%, 0);
@@ -318,10 +325,11 @@ const Group1 = styled.div`
   top: 15%;
   opacity: 0.2;
   margin-right: 30px;
-  animation: ${MidiNoteAni} 200s linear infinite;
+  animation: ${MidiNoteAni} 120s linear infinite;
 
   @media (max-width: 760px) {
-    animation: ${MidiNoteAni} 100s linear infinite;
+    animation: ${MidiNoteAni} 30s linear infinite;
+    opacity: 0.3;
   }
 `;
 
@@ -363,6 +371,7 @@ const Note4 = styled.img`
 
   @media (max-width: 760px) {
     left: 75%;
+    display: none;
   }
 `;
 
@@ -382,17 +391,17 @@ const Group2 = styled.div`
   height: 20%;
   position: relative;
   top: 60%;
-  opacity: 0.2;
+  opacity: 0.15;
   margin-right: 30px;
-  animation: ${MidiNoteAni} 70s linear infinite;
+  animation: ${MidiNoteAni} 200s linear infinite;
 
   @media (max-width: 1920px) {
     top: 50%;
   }
 
   @media (max-width: 760px) {
-    animation: ${MidiNoteAni} 80s linear infinite;
-    opacity: 0.2;
+    animation: ${MidiNoteAni} 70s linear infinite;
+    opacity: 0.1;
   }
 `;
 
@@ -405,7 +414,7 @@ const Note6 = styled.img`
     left: 5%;
     top: 120px;
   }
-`
+`;
 
 const Note7 = styled.img`
   position: absolute;
@@ -416,7 +425,7 @@ const Note7 = styled.img`
     left: 35%;
     top: -30px;
   }
-`
+`;
 
 const Note8 = styled.img`
   position: absolute;
@@ -426,6 +435,6 @@ const Note8 = styled.img`
   @media (max-width: 760px) {
     left: 65%;
   }
-`
+`;
 
 export default Banner;

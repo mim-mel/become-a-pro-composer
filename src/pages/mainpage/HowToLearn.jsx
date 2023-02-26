@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { Typewriter } from 'react-simple-typewriter';
+import { Fade } from 'react-awesome-reveal';
 import './../../fonts/fonts.css';
 
 const HowToLeran = () => {
@@ -7,15 +9,28 @@ const HowToLeran = () => {
       <Triangle1 />
       <Triangle2 />
       <Triangle3 />
-      <Title>
-        <TitleSpan>Learn</TitleSpan> how to{' '}
-        <TitleSpan>write Orchestral Music</TitleSpan> as a <br />
-        <TitleSpan color='#fe5d26'>Composer</TitleSpan>
-      </Title>
-      <TitleMiniText>
-        ... and <TitleSpan color='#fe5d26'>stop wishing</TitleSpan> that you
-        could. You can. From home.
-      </TitleMiniText>
+      <Fade direction={'up'} duration={1200} triggerOnce={true}>
+        <>
+          <Title>
+            <TitleSpan>Learn</TitleSpan> how to{' '}
+            <TitleSpan>write Orchestral Music</TitleSpan> as a <br />
+            <TitleSpan2 color='#fe5d26'>
+              <Typewriter
+                words={['Composer', 'Musician', 'Hobbyist']}
+                loop={0}
+                cursor
+                typeSpeed={150}
+                deleteSpeed={150}
+                delaySpeed={1000}
+              />
+            </TitleSpan2>
+          </Title>
+          <TitleMiniText>
+            ... and <TitleSpan color='#fe5d26'>stop wishing</TitleSpan> that you
+            could. You can. From home.
+          </TitleMiniText>
+        </>
+      </Fade>
 
       {/* Content1 */}
       <ContentWrap grid='43% 43%'>
@@ -160,6 +175,25 @@ const HowToLeran = () => {
   );
 };
 
+const typing = keyframes`
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+`;
+
+const blinkCaret = keyframes`
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #007bff;
+  }
+`;
+
 const HowToLearnWrap = styled.div`
   width: 100%;
   height: auto;
@@ -262,11 +296,22 @@ const TitleSpan = styled.span`
   color: ${props => props.color};
 `;
 
+const TitleSpan2 = styled.span`
+  font-size: 45px;
+  font-family: 'Exo2-Bold';
+  color: ${props => props.color};
+
+  @media (max-width: 760px) {
+    font-size: 35px;
+  }
+`;
+
 const TitleMiniText = styled.div`
   font-size: 17px;
   font-family: 'Exo2-Regular';
   letter-spacing: 0.5px;
   margin-bottom: 50px;
+  text-align: center;
 
   @media (max-width: 1024px) {
     margin-bottom: 70px;
