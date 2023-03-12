@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Zoom } from 'react-awesome-reveal';
 import './../../fonts/fonts.css';
 
 const ConnectBanner = () => {
@@ -19,45 +20,52 @@ const ConnectBanner = () => {
           <BannerButton>JOIN DISCORD</BannerButton>
         </TextBlock>
         <WhiteBoxBlock>
-          <WhiteBox1>
-            <IconBlock>
-              <DiscordIcon />
-              <DiscordName>WalterMelone</DiscordName>
-            </IconBlock>
-            <DiscordText>
-              I’m really happy to join this discord server. Kevin is an
-              inspiration for me to keep on working hard on my songs.
-            </DiscordText>
-          </WhiteBox1>
-          <WhiteBox2>
-            <IconBlock>
-              <DiscordIcon />
-              <DiscordName>Lukas S.</DiscordName>
-            </IconBlock>
-            <DiscordText>
-              There's no question that's wrong to ask, neither is the most
-              unfinished demo of demos not good enough for feedback. All of us
-              are here, connected through our love for music and it's a place
-              for everyone to learn and grow as a composer and maybe be a better
-              person for it ;)
-            </DiscordText>
-          </WhiteBox2>
+          <Zoom duration={600} triggerOnce={true}>
+            <WhiteBox1>
+              <IconBlock>
+                <DiscordIcon />
+                <DiscordName>WalterMelone</DiscordName>
+              </IconBlock>
+              <DiscordText>
+                I’m really happy to join this discord server. Kevin is an
+                inspiration for me to keep on working hard on my songs.
+              </DiscordText>
+            </WhiteBox1>
+          </Zoom>
+          <Zoom duration={600} delay={300} triggerOnce={true}>
+            <WhiteBox2>
+              <IconBlock>
+                <DiscordIcon />
+                <DiscordName>Lukas S.</DiscordName>
+              </IconBlock>
+              <DiscordText>
+                There's no question that's wrong to ask, neither is the most
+                unfinished demo of demos not good enough for feedback. All of us
+                are here, connected through our love for music and it's a place
+                for everyone to learn and grow as a composer and maybe be a
+                better person for it ;)
+              </DiscordText>
+            </WhiteBox2>
+          </Zoom>
         </WhiteBoxBlock>
         <WhiteBoxBlock>
-          <WhiteBox3>
-            <IconBlock>
-              <DiscordIcon />
-              <DiscordName>ZEMO</DiscordName>
-            </IconBlock>
-            <DiscordText>
-              Really been digging this community. Taking advice, this is a gold
-              mine of knowledge and experience. Especially for someone like me,
-              who has played music all of my life in bands, but only recently, I
-              got brave enough to try my hand at composing. The #mental-health
-              channel really made me feel more comfortable, just knowing that
-              others deal with a lot of what I have gone through.
-            </DiscordText>
-          </WhiteBox3>
+          <Zoom duration={600} delay={600} triggerOnce={true}>
+            <WhiteBox3>
+              <IconBlock>
+                <DiscordIcon />
+                <DiscordName>ZEMO</DiscordName>
+              </IconBlock>
+              <DiscordText>
+                Really been digging this community. Taking advice, this is a
+                gold mine of knowledge and experience. Especially for someone
+                like me, who has played music all of my life in bands, but only
+                recently, I got brave enough to try my hand at composing. The
+                #mental-health channel really made me feel more comfortable,
+                just knowing that others deal with a lot of what I have gone
+                through.
+              </DiscordText>
+            </WhiteBox3>
+          </Zoom>
         </WhiteBoxBlock>
       </ContentsWrap>
     </BannerWrap>
@@ -68,11 +76,10 @@ const BannerWrap = styled.div`
   width: 100%;
   height: 570px;
   position: relative;
-  margin-top: 20px;
   overflow-x: hidden;
 
   @media (max-width: 760px) {
-    height: 760px;
+    height: 750px;
   }
 `;
 
@@ -87,8 +94,14 @@ const BannerBack = styled.div`
   transform: translate(-50%, -50%);
   z-index: -10;
 
+  @media (max-width: 1024px) {
+    width: 105%;
+    background-repeat: no-repeat;
+  }
+
   @media (max-width: 760px) {
-    height: 760px;
+    height: 740px;
+    width: 115%;
     background-repeat: no-repeat;
   }
 `;

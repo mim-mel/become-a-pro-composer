@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import './../../fonts/fonts.css';
+import { Fade } from 'react-awesome-reveal';
 import {
   ContentTextBlock,
   ContentText1,
@@ -20,31 +21,35 @@ const LoveUs = () => {
           </ContentText3>
           <StarImg src='image/star.png' />
         </ContentTextBlock>
-        <ImgBlock>
-          <OrangeBox>
-            <BoxText>
-              “I have never seen anyone create content at this level. You’ve
-              inspired me to start a journey of my own.”
-            </BoxText>
-            <BoxText2>Ariel Yznardo // Film & Media Composer</BoxText2>
-            <BoxLogo src='image/user-logo1.png' />
-          </OrangeBox>
-          <UserImg url='image/user-img1.png' />
-        </ImgBlock>
+        <Fade direction={'up'} duration={800} triggerOnce={true}>
+          <ImgBlock>
+            <OrangeBox>
+              <BoxText>
+                “I have never seen anyone create content at this level. You’ve
+                inspired me to start a journey of my own.”
+              </BoxText>
+              <BoxText2>Ariel Yznardo // Film & Media Composer</BoxText2>
+              <BoxLogo src='image/user-logo1.png' />
+            </OrangeBox>
+            <UserImg url='image/user-img1.png' />
+          </ImgBlock>
+        </Fade>
       </Block>
       <Block grid='58% 38%'>
-        <ImgBlock>
-          <OrangeBox>
-            <BoxText>
-              “If you want to learn more about music production, this platform
-              is one of the most valuable ones that are out there. This
-              information sticks unlike any other channel!
-            </BoxText>
-            <BoxText2>Ben Berkenbosch // Composer & Pianist</BoxText2>
-            <BoxLogo src='image/user-logo2.png' />
-          </OrangeBox>
-          <UserImg url='image/user-img2.png' />
-        </ImgBlock>
+        <Fade direction={'up'} duration={800} triggerOnce={true}>
+          <ImgBlock>
+            <OrangeBox>
+              <BoxText>
+                “If you want to learn more about music production, this platform
+                is one of the most valuable ones that are out there. This
+                information sticks unlike any other channel!
+              </BoxText>
+              <BoxText2>Ben Berkenbosch // Composer & Pianist</BoxText2>
+              <BoxLogo src='image/user-logo2.png' />
+            </OrangeBox>
+            <UserImg url='image/user-img2.png' />
+          </ImgBlock>
+        </Fade>
       </Block>
     </Wrap>
   );

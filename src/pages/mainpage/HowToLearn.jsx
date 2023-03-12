@@ -9,69 +9,71 @@ const HowToLeran = () => {
       <Triangle1 />
       <Triangle2 />
       <Triangle3 />
-      <Fade direction={'up'} duration={1200} triggerOnce={true}>
-        <>
-          <Title>
-            <TitleSpan>Learn</TitleSpan> how to{' '}
-            <TitleSpan>write Orchestral Music</TitleSpan> as a <br />
-            <TitleSpan2 color='#fe5d26'>
-              <Typewriter
-                words={['Composer', 'Musician', 'Hobbyist']}
-                loop={0}
-                cursor
-                typeSpeed={150}
-                deleteSpeed={150}
-                delaySpeed={1000}
-              />
-            </TitleSpan2>
-          </Title>
-          <TitleMiniText>
-            ... and <TitleSpan color='#fe5d26'>stop wishing</TitleSpan> that you
-            could. You can. From home.
-          </TitleMiniText>
-        </>
-      </Fade>
+      <>
+        <Title>
+          <TitleSpan>Learn</TitleSpan> how to{' '}
+          <TitleSpan>write Orchestral Music</TitleSpan> as a <br />
+          <TitleSpan2 color='#fe5d26'>
+            <Typewriter
+              words={['Composer', 'Musician', 'Hobbyist']}
+              loop={0}
+              cursor
+              typeSpeed={150}
+              deleteSpeed={150}
+              delaySpeed={1000}
+            />
+          </TitleSpan2>
+        </Title>
+        <TitleMiniText>
+          ... and <TitleSpan color='#fe5d26'>stop wishing</TitleSpan> that you
+          could. You can. From home.
+        </TitleMiniText>
+      </>
 
       {/* Content1 */}
       <ContentWrap grid='43% 43%'>
-        <Content1Wrap>
-          <Content1FotosBlock columns='55% 40%' bottom='20px'>
-            <Content1Foto src='image/composer1.jpg' alt='composer-img' />
-            <Content1Foto
-              src='image/composer2.jpg'
-              alt='composer-img'
-              align='end'
-              margin='0 15px 0 0'
-            />
-          </Content1FotosBlock>
-          <Content1FotosBlock columns='43% 57%'>
-            <Content1Foto src='image/composer3.jpg' alt='composer-img' />
-            <Content1Foto src='image/composer4.jpg' alt='composer-img' />
-          </Content1FotosBlock>
-        </Content1Wrap>
-        <ContentTextBlock>
-          <ContentIcon top='19%'>
-            <ContentIconImg
-              marginBottom='4px'
-              url='image/how-icon1.png'
-              marginLeft='4px'
-            />
-          </ContentIcon>
-          <ContentText1>LEARN: HIGH-QUALITY CONTENT</ContentText1>
-          <ContentText2>
-            Powerful skills for composition & production
-          </ContentText2>
-          <ContentText3>
-            Free beginner guides and high-quality video tutorials on the most
-            common music writing scenarios help you learn how to compose faster,
-            better and smarter. Are you ready to write your first orchestral
-            masterpiece?
-          </ContentText3>
-          <ContentText4Block>
-            <ContentText4>Start learning now</ContentText4>
-            <ContentText4Img />
-          </ContentText4Block>
-        </ContentTextBlock>
+        <Fade direction={'up'} duration={800} triggerOnce={true}>
+          <Content1Wrap>
+            <Content1FotosBlock columns='55% 40%' bottom='20px'>
+              <Content1Foto src='image/composer1.jpg' alt='composer-img' />
+              <Content1Foto
+                src='image/composer2.jpg'
+                alt='composer-img'
+                align='end'
+                margin='0 15px 0 0'
+              />
+            </Content1FotosBlock>
+            <Content1FotosBlock columns='43% 57%'>
+              <Content1Foto src='image/composer3.jpg' alt='composer-img' />
+              <Content1Foto src='image/composer4.jpg' alt='composer-img' />
+            </Content1FotosBlock>
+          </Content1Wrap>
+        </Fade>
+        <Fade direction={'up'} duration={800} delay={300} triggerOnce={true}>
+          <ContentTextBlock>
+            <ContentIcon top='19%'>
+              <ContentIconImg
+                marginBottom='4px'
+                url='image/how-icon1.png'
+                marginLeft='4px'
+              />
+            </ContentIcon>
+            <ContentText1>LEARN: HIGH-QUALITY CONTENT</ContentText1>
+            <ContentText2>
+              Powerful skills for composition & production
+            </ContentText2>
+            <ContentText3>
+              Free beginner guides and high-quality video tutorials on the most
+              common music writing scenarios help you learn how to compose
+              faster, better and smarter. Are you ready to write your first
+              orchestral masterpiece?
+            </ContentText3>
+            <ContentText4Block>
+              <ContentText4>Start learning now</ContentText4>
+              <ContentText4Img />
+            </ContentText4Block>
+          </ContentTextBlock>
+        </Fade>
       </ContentWrap>
 
       {/* Banner */}
@@ -108,105 +110,100 @@ const HowToLeran = () => {
 
       {/* Content2 */}
       <ContentWrap grid='40% 40%'>
-        <ContentTextBlock>
-          <ContentIcon top='10%'>
-            <ContentIconImg marginBottom='4px' url='image/how-icon2.png' />
-          </ContentIcon>
-          <ContentText1>PRACTISE: MAKING IS STICK</ContentText1>
-          <ContentText2>
-            Writing tasks put your knowledge into practice
-          </ContentText2>
-          <ContentText3>
-            Learn exactly how to write modern orchestral music step-by-step with
-            tasks and assignments. Our writing exercise and composing challenges
-            make your knowledge stick through Active Recall.
-          </ContentText3>
-          <ContentText4Block>
-            <ContentText4>See all music writing tasks</ContentText4>
-            <ContentText4Img />
-          </ContentText4Block>
-        </ContentTextBlock>
-        <Content2ImgBlock>
-          <Content2Img src='image/how-content2-img.jpg' alt='img' />
-          <XpImgBlock>
-            <img src='image/how-xp-icon.png' alt='icon' />
-          </XpImgBlock>
-          <TaskTextWrap>
-            <TaskButton>TASK</TaskButton>
-            <TaskText>
-              Write a 4-bar ostinato using only 8th note triplets
-            </TaskText>
-          </TaskTextWrap>
-        </Content2ImgBlock>
+        <Fade direction={'up'} duration={800} triggerOnce={true}>
+          <ContentTextBlock>
+            <ContentIcon top='10%'>
+              <ContentIconImg marginBottom='4px' url='image/how-icon2.png' />
+            </ContentIcon>
+            <ContentText1>PRACTISE: MAKING IS STICK</ContentText1>
+            <ContentText2>
+              Writing tasks put your knowledge into practice
+            </ContentText2>
+            <ContentText3>
+              Learn exactly how to write modern orchestral music step-by-step
+              with tasks and assignments. Our writing exercise and composing
+              challenges make your knowledge stick through Active Recall.
+            </ContentText3>
+            <ContentText4Block>
+              <ContentText4>See all music writing tasks</ContentText4>
+              <ContentText4Img />
+            </ContentText4Block>
+          </ContentTextBlock>
+        </Fade>
+        <Fade direction={'up'} duration={800} delay={300} triggerOnce={true}>
+          <Content2ImgBlock>
+            <Content2Img src='image/how-content2-img.jpg' alt='img' />
+            <XpImgBlock>
+              <img src='image/how-xp-icon.png' alt='icon' />
+            </XpImgBlock>
+            <TaskTextWrap>
+              <TaskButton>TASK</TaskButton>
+              <TaskText>
+                Write a 4-bar ostinato using only 8th note triplets
+              </TaskText>
+            </TaskTextWrap>
+          </Content2ImgBlock>
+        </Fade>
       </ContentWrap>
 
       {/* Content3 */}
       <ContentWrap grid='43% 43%' marginTop='70px'>
-        <Content1Wrap>
-          <Content3ImgBlock>
-            <Content3Img />
-          </Content3ImgBlock>
-        </Content1Wrap>
-        <ContentTextBlock order='-1'>
-          <ContentIcon top='10%'>
-            <ContentIconImg
-              marginBottom='4px'
-              url='image/how-icon1.png'
-              marginLeft='4px'
-            />
-          </ContentIcon>
-          <ContentText1>SHARE: GET IN TOUCH!</ContentText1>
-          <ContentText2>
-            Your own
-            <br /> personal feedback
-          </ContentText2>
-          <ContentText3>
-            Post your results and receive feedback from the Become A Pro
-            Composer community. Connect with composers of all levels and grow
-            together. We are ready when you are.
-          </ContentText3>
-          <ContentText4Block>
-            <ContentText4>Take me to the Community</ContentText4>
-            <ContentText4Img />
-          </ContentText4Block>
-        </ContentTextBlock>
+        <Fade direction={'up'} duration={800} triggerOnce={true}>
+          <Content1Wrap>
+            <Content3ImgBlock>
+              <Content3Img />
+            </Content3ImgBlock>
+          </Content1Wrap>
+        </Fade>
+        <Fade direction={'up'} duration={800} delay={300} triggerOnce={true}>
+          <ContentTextBlock order='-1'>
+            <ContentIcon top='10%'>
+              <ContentIconImg
+                marginBottom='4px'
+                url='image/how-icon1.png'
+                marginLeft='4px'
+              />
+            </ContentIcon>
+            <ContentText1>SHARE: GET IN TOUCH!</ContentText1>
+            <ContentText2>
+              Your own
+              <br /> personal feedback
+            </ContentText2>
+            <ContentText3>
+              Post your results and receive feedback from the Become A Pro
+              Composer community. Connect with composers of all levels and grow
+              together. We are ready when you are.
+            </ContentText3>
+            <ContentText4Block>
+              <ContentText4>Take me to the Community</ContentText4>
+              <ContentText4Img />
+            </ContentText4Block>
+          </ContentTextBlock>
+        </Fade>
       </ContentWrap>
     </HowToLearnWrap>
   );
 };
 
-const typing = keyframes`
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-`;
-
-const blinkCaret = keyframes`
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #007bff;
-  }
-`;
-
 const HowToLearnWrap = styled.div`
   width: 100%;
-  height: auto;
+  height: 1980px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
   top: -50px;
+
+  @media (max-width: 1024px) {
+    height: 1850px;
+  }
 
   @media (max-width: 760px) {
     top: 0px;
+    height: 2640px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -266,10 +263,6 @@ const Triangle3 = styled.div`
   @media (max-width: 760px) {
     left: 75%;
   }
-`;
-
-const Background = styled.div`
-  position: absolute;
 `;
 
 const Title = styled.div`
@@ -375,7 +368,7 @@ const Content1Foto = styled.img`
 
 export const ContentTextBlock = styled.div`
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
