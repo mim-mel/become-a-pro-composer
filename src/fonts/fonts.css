@@ -42,3 +42,13 @@
   font-family: Roboto-Bold;
   src: url(./Roboto-Bold.ttf);
 }
+
+@font-face {
+  font-family: Latto-Light;
+  src: url(./Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: Latto-Regular;
+  src: url(./Lato-Regular.ttf);
+}
