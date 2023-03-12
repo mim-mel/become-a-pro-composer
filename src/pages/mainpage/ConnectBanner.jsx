@@ -17,7 +17,11 @@ const ConnectBanner = () => {
             question is wrong to ask. Nor is the most unfinished demo not good
             enough for feedback. Learn and grow!
           </Text>
-          <BannerButton>JOIN DISCORD</BannerButton>
+          <ButtonWrap>
+            <ButtonBack>
+              <BannerButton>JOIN DISCORD</BannerButton>
+            </ButtonBack>
+          </ButtonWrap>
         </TextBlock>
         <WhiteBoxBlock>
           <Zoom duration={600} triggerOnce={true}>
@@ -190,7 +194,7 @@ const Text = styled.div`
   font-size: 14px;
   line-height: 19px;
   color: #f4f4f4;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   @media (max-width: 1024px) {
     margin-bottom: 35px;
@@ -203,39 +207,53 @@ const Text = styled.div`
   }
 `;
 
-const BannerButton = styled.button`
+const ButtonWrap = styled.div`
+  position: relative;
   width: 170px;
+  height: 57px;
+
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+  }
+`;
+
+const ButtonBack = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fe5d26;
+  border-radius: 10px;
+`;
+
+const BannerButton = styled.button`
+  position: absolute;
+  top: -8px;
+  left: 8px;
   font-size: 16px;
+  width: 100%;
+  height: 100%;
   font-family: 'Roboto-Bold';
-  letter-spacing: 0px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
   color: #0d1f2d;
   border: none;
   cursor: pointer;
-  padding: 20px 17px;
-  box-shadow: rgba(254, 93, 38) -6px 6px 0 0, -6px 6px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  transition: 0.2s;
+  //백그라운드 하나 더 만들고 쉐도우 없애기
 
-  :active {
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: -5px;
-  }
-
-  @media (max-width: 1024px) {
-    padding: 20px 14px;
-    font-size: 16px;
+  &:hover {
+    top: 0;
+    left: 0;
   }
 
   @media (max-width: 768px) {
-    padding: 14px 7px;
-    font-size: 12px;
-    width: 150px;
+    font-size: 14px;
   }
 `;
 
@@ -246,7 +264,7 @@ const WhiteBoxBlock = styled.div`
 
 const WhiteBox1 = styled.div`
   width: 100%;
-  height: 150px;
+  height: 100%;
   background-color: #f4f4f4;
   border-radius: 10px;
   margin-bottom: 10px;

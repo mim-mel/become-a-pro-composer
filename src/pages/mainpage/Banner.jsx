@@ -52,7 +52,10 @@ const Banner = () => {
           <BannerText>Orchestral music production. Made easy.</BannerText>
         </Fade>
         <Fade direction={'up'} delay={300} duration={800} triggerOnce={true}>
-          <BannerButton>GET STARTED</BannerButton>
+          <ButtonWrap>
+            <ButtonBack />
+            <BannerButton>GET STARTED</BannerButton>
+          </ButtonWrap>
           <BottonBottomText>
             Instant access. No sign-up required.
           </BottonBottomText>
@@ -234,41 +237,48 @@ const BannerText = styled.div`
   }
 `;
 
+const ButtonWrap = styled.div`
+  position: relative;
+  margin: 45px 0 0 0;
+  width: 180px;
+  height: 57px;
+
+  @media (max-width: 768px) {
+    margin: 45px auto 0 auto;
+  }
+`;
+
+const ButtonBack = styled.div`
+  width: 180px;
+  height: 57px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fe5d26;
+  border-radius: 10px;
+`;
+
 const BannerButton = styled.button`
+  position: absolute;
+  top: -8px;
+  left: 8px;
   font-size: 16px;
+  width: 180px;
+  height: 57px;
   font-family: 'Roboto-Bold';
   letter-spacing: 0.5px;
-  margin: 35px 0 0 8px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
-  color: #000;
+  color: #0d1f2d;
   border: none;
   cursor: pointer;
-  padding: 20px 45px;
-  box-shadow: rgba(254, 93, 38) -6px 6px 0 0, -6px 6px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  transition: 0.2s;
   //백그라운드 하나 더 만들고 쉐도우 없애기
 
   &:hover {
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: -5px;
-  }
-
-  @media (max-width: 1024px) {
-    margin: 45px 0 0 10px;
-    padding: 2vw 5vw;
-  }
-
-  @media (max-width: 768px) {
-    display: block;
-    margin: 30px auto 0 auto;
-    padding: 5vw 10vw;
-    z-index: 100;
+    top: 0;
+    left: 0;
   }
 `;
 
@@ -276,7 +286,7 @@ const BottonBottomText = styled.div`
   color: white;
   font-family: 'Exo2-Light';
   font-size: 12px;
-  margin: 15px 0 0 10px;
+  margin: 10px 0 0 0;
   opacity: 0.5;
 
   @media (max-width: 1024px) {

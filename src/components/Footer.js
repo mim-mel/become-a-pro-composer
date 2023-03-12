@@ -9,10 +9,13 @@ const Footer = () => {
           Start your composer journey today with{' '}
           <span>becomeaprocomposer.com</span>
         </Title>
-        <Button>
-          START MY COMPOSER JOURNEY
-          <img src='image/blue-arrow.png' alt='arrow' />
-        </Button>
+        <ButtonWrap>
+          <ButtonBack />
+          <Button>
+            START MY COMPOSER JOURNEY
+            <img src='image/blue-arrow.png' alt='arrow' />
+          </Button>
+        </ButtonWrap>
         <MiniText>Instant access. No sign-up needed.</MiniText>
       </Footer1Wrap>
       <Footer2Wrap></Footer2Wrap>
@@ -65,45 +68,56 @@ const Footer2Wrap = styled.div`
   background-color: #0d1f2d;
 `;
 
+const ButtonWrap = styled.div`
+  position: relative;
+  width: 330px;
+  height: 57px;
+  margin: 40px 0 0 0;
+
+  @media (max-width: 760px) {
+    width: 290px;
+    height: 50px;
+  }
+`;
+
+const ButtonBack = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0d1f2d;
+  border-radius: 10px;
+`;
+
 const Button = styled.button`
+  position: absolute;
+  top: -8px;
+  left: 8px;
   font-size: 16px;
+  width: 100%;
+  height: 100%;
   font-family: 'Roboto-Bold';
   letter-spacing: 0.5px;
-  margin: 40px 0 0 0;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 10px;
-  color: #000;
+  color: #0d1f2d;
   border: none;
   cursor: pointer;
-  padding: 20px 45px;
-  box-shadow: #0d1f2d -6px 6px 0 0, -6px 6px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  transition: 0.2s;
 
   &:hover {
-    box-shadow: 0px 0px 0px 0px;
-    top: 5px;
-    left: -5px;
-  }
-
-  @media (max-width: 1024px) {
-    margin: 35px 0 0 10px;
-    padding: 21px 33px;
-    font-size: 15px;
-  }
-
-  @media (max-width: 760px) {
-    display: block;
-    margin: 30px auto 0 auto;
-    padding: 18px 28px;
-    font-size: 13px;
+    top: 0;
+    left: 0;
   }
 
   img {
     margin-left: 10px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 `;
 
