@@ -37,14 +37,14 @@ const Footer = () => {
             <Footer2Text>Newcomers</Footer2Text>
           </TextBlock>
           <TextBlock>
-            <Footer2Title>PRACTISE</Footer2Title>
+            <Footer2Title marginTop='30px'>PRACTISE</Footer2Title>
             <Footer2Text>Composer Exercises</Footer2Text>
             <Footer2Text>Manuals</Footer2Text>
             <Footer2Text>Tutorials</Footer2Text>
             <Footer2Text>Communities</Footer2Text>
           </TextBlock>
           <TextBlock>
-            <Footer2Title>SHARE</Footer2Title>
+            <Footer2Title marginTop='30px'>SHARE</Footer2Title>
             <Footer2Text>BAPC Discord</Footer2Text>
             <Footer2Text>Editorials</Footer2Text>
             <Footer2Text>Product</Footer2Text>
@@ -184,6 +184,10 @@ const Line = styled.div`
   background-color: #f5f5f5;
   margin-top: 60px;
   opacity: 0.2;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 const TextWrap = styled.div`
@@ -191,6 +195,15 @@ const TextWrap = styled.div`
   width: 858px;
   justify-content: space-between;
   margin-top: 54px;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
+
+  @media (max-width: 760px) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
 `;
 
 const TextBlock = styled.div``;
@@ -200,6 +213,16 @@ const Footer2Title = styled.div`
   color: #fe5d26;
   font-size: 18px;
   margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 760px) {
+    margin-bottom: 14px;
+    margin-top: ${props => props.marginTop};
+    text-align: center;
+  }
 `;
 
 const Footer2Text = styled.div`
@@ -207,10 +230,26 @@ const Footer2Text = styled.div`
   color: #f4f4f4;
   font-size: 16px;
   margin-bottom: 13px;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 760px) {
+    font-size: 14px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
 `;
 
 const Logo = styled.img`
   margin: 17px 0;
+
+  @media (max-width: 760px) {
+    margin: 23px 0;
+  }
 `;
 
 const RightText = styled.div`
@@ -218,6 +257,10 @@ const RightText = styled.div`
   font-size: 16px;
   color: #f4f4f4;
   margin-bottom: 25px;
+
+  @media (max-width: 1024px) {
+    font-size: 13px;
+  }
 `;
 
 const IconWrap = styled.div`
